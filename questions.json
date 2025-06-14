@@ -1,0 +1,17 @@
+[
+  {
+    "question": "Mi Magyarország fővárosa?",
+    "options": ["Debrecen", "Szeged", "Budapest", "Pécs"],
+    "correct": 2
+  },
+  {
+    "question": "Melyik évben volt az 1956-os forradalom?",
+    "options": ["1945", "1956", "1968", "1989"],
+    "correct": 1
+  },
+  {
+    "question": "Ki írta az Egri csillagokat?",
+    "options": ["Móricz Zsigmond", "Jókai Mór", "Gárdonyi Géza", "Arany János"],
+    "correct": 2
+  }
+]

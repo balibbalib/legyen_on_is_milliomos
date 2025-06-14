@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legyen Ön is Milliomos!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #000428, #004e92);
+      color: white;
+      text-align: center;
+      padding: 2em;
+    }
+    .game-box {
+      max-width: 600px;
+      margin: auto;
+      padding: 2em;
+      background: rgba(0,0,0,0.6);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    .question {
+      font-size: 1.5em;
+      margin-bottom: 1em;
+    }
+    .timer {
+      font-size: 1.2em;
+      margin-bottom: 1em;
+      color: #ffd700;
+      transition: color 0.3s, background 0.3s;
+    }
+    .timer.warning {
+      color: red;
+      animation: flash 1s infinite;
+    }
+    @keyframes flash {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+    .answers button {
+      display: block;
+      width: 100%;
+      margin: 0.5em 0;
+      padding: 1em;
+      background-color: #1f4068;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .answers button:hover {
+      background-color: #2a5298;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-box">
+    <h1>Legyen Ön is Milliomos!</h1>
+    <div class="timer" id="timer">Idő: 30 mp</div>
+    <div class="question" id="question">Betöltés...</div>
+    <div class="answers" id="answers"></div>
+    <div id="result" class="hidden"></div>
+  </div>
+
+  <script>
+    let questions = [];
+    let current = 0;
+    let timer;
+    let timeLeft = 30;
+
+    const questionEl = document.getElementById("question");
+    const answersEl = document.getElementById("answers");
+    const resultEl = document.getElementById("result");
+    const timerEl = document.getElementById("timer");
+
+    function startTimer() {
+      clearInterval(timer);
+      timeLeft = 30;
+      timerEl.textContent = `Idő: ${timeLeft} mp`;
+      timerEl.classList.remove("warning");
+      timer = setInterval(() => {
+        timeLeft--;
+        timerEl.textContent = `Idő: ${timeLeft} mp`;
+
+        if (timeLeft <= 10) {
+          timerEl.classList.add("warning");
+        }
+
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          endGame("Lejárt az idő. A játék véget ért.");
+        }
+      }, 1000);
+    }
+
+    function showQuestion() {
+      const q = questions[current];
+      questionEl.textContent = q.question;
+      answersEl.innerHTML = "";
+      q.options.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => checkAnswer(index);
+        answersEl.appendChild(btn);
+      });
+      startTimer();
+    }
+
+    function checkAnswer(index) {
+      clearInterval(timer);
+      if (index === questions[current].correct) {
+        current++;
+        if (current < questions.length) {
+          showQuestion();
+        } else {
+          endGame("Gratulálunk! Ön nyert!");
+        }
+      } else {
+        endGame("Sajnos ez hibás válasz volt. A játék véget ért.");
+      }
+    }
+
+    function endGame(message) {
+      questionEl.classList.add("hidden");
+      answersEl.classList.add("hidden");
+      timerEl.classList.add("hidden");
+      resultEl.textContent = message;
+      resultEl.classList.remove("hidden");
+    }
+
+    async function loadQuestions() {
+      try {
+        const res = await fetch("questions.json");
+        questions = await res.json();
+        showQuestion();
+      } catch (error) {
+        questionEl.textContent = "Nem sikerült betölteni a kérdéseket.";
+      }
+    }
+
+    loadQuestions();
+  </script>
+</body>
+</html>
