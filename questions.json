@@ -1,17 +1,532 @@
 [
   {
-    "question": "Mi Magyarország fővárosa?",
-    "options": ["Debrecen", "Szeged", "Budapest", "Pécs"],
-    "correct": 2
+    "question": "Mi volt Sztálin célja?",
+    "options": [
+      "Szovjetunió nagyhatalom legyen",
+      "Világháború kirobbantása",
+      "Szocializmus terjesztése Kínában",
+      "Nemzetközi kommunista államszövetség létrehozása"
+    ],
+    "correct": 0
   },
   {
-    "question": "Melyik évben volt az 1956-os forradalom?",
-    "options": ["1945", "1956", "1968", "1989"],
+    "question": "Mit vezetett be Sztálin?",
+    "options": [
+      "Állami monopóliumrendszer",
+      "Tervgazdaságot",
+      "Hadikommunizmust",
+      "Agrárreformot"
+    ],
     "correct": 1
   },
   {
-    "question": "Ki írta az Egri csillagokat?",
-    "options": ["Móricz Zsigmond", "Jókai Mór", "Gárdonyi Géza", "Arany János"],
+    "question": "Mi váltotta le a magángazdaságot?",
+    "options": [
+      "Privatizáció",
+      "Szövetkezeti rendszer",
+      "Kollektivizálás",
+      "Piacgazdaság"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mi alakult ki a kollektivizálás következtében?",
+    "options": [
+      "Infláció",
+      "Polgárháború",
+      "Éhínség",
+      "Forradalom"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Hol alakult ki a legnagyobb mértékben éhínség?",
+    "options": [
+      "Oroszország északi részein",
+      "Kazahsztánban",
+      "Ukrajnában",
+      "Fehéroroszországban"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Hogy hívjuk a gazdag, saját földdel rendelkező parasztságot?",
+    "options": [
+      "kulákok",
+      "cáristák",
+      "burzsoák",
+      "kommunák"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Melyik évben választottak új Központi Bizottságot?",
+    "options": [
+      "1930",
+      "1936",
+      "1940",
+      "1934"
+    ],
+    "correct": 3
+  },
+  {
+    "question":"Mi változott ebben a kormányban?",
+    "options":[
+      "Agrárreform bevezetése",
+      "Új alkotmány elfogadása",
+      "Politikai tisztogatások",
+      "Hadüzenet a nyugati hatalmaknak"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mi fejlődött ebben az időszakban?",
+    "options": [
+      "Mezőgazdaság",
+      "Könnyűipar",
+      "Hadipar",
+      "Oktatásügy"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Milyen államforma alakult ki 1934 után?",
+    "options": [
+      "Totális diktatúra",
+      "Alkotmányos monarchia",
+      "Parlamentáris köztársaság",
+      "Szövetségi állam"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Mi alakult ki Európában, miután az USA beleszólt az európai gazdaságba?",
+    "options": [
+      "infláció",
+      "élelmiszer-többlet",
+      "háborús konjunktúra",
+      "költségvetési felesleg"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ki volt Gustav Stresemann?",
+    "options": [
+      "német belügyminiszter",
+      "francia államfő",
+      "amerikai diplomata",
+      "brit miniszterelnök"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Miért törölték el a vesztes országok tartozásait?",
+    "options": [
+      "világválság",
+      "fegyverkezési egyezmény miatt",
+      "párizsi szerződés értelmében",
+      "észak-amerikai nyomásra"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Milyen párt alakult Németországban?",
+    "options": [
+      "Kommunista Munkáspárt",
+      "Szociáldemokrata Liga",
+      "Nemzetiszocialista Német Munkáspárt",
+      "Monarchista Párt"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mi volt az egyik fő eszméje ennek a kornak?",
+    "options": [
+      "antiszemitizmus",
+      "pacifizmus",
+      "internacionalizmus",
+      "feudalizmus"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Mit jelent az antiszemitizmus?",
+    "options": [
+      "négerellenesség",
+      "keresztényellenesség",
+      "zsidóellenesség",
+      "háborús uszítás"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Melyik évben alakult ki a gazdasági világválság?",
+    "options": [
+      "1919-ben",
+      "1929-ben",
+      "1935-ben",
+      "1945-ben"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Milyen törvényt hozott létre Hitler 1933. március 24-én?",
+    "options": [
+      "nürnbergi törvény",
+      "felhatalmazási törvényt",
+      "sajtótörvény",
+      "fajvédelmi törvény"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mi a gestapo?",
+    "options": [
+      "állami rádió",
+      "titkos rendőrség",
+      "kémelhárító szolgálat",
+      "hadsereg elitalakulata"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mi volt a nácik célja?",
+    "options": [
+      "proletárforradalom",
+      "a német felsőbbrendűség",
+      "a francia megszállás",
+      "a brit gyarmatok elfoglalása"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Melyik évben volt a \"hosszú kések éjszakája\"?",
+    "options": [
+      "1932",
+      "1936",
+      "1938",
+      "1934"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Melyik törvény foglalja magába a zsidó eltiltásokat?",
+    "options": [
+      "versailles-i törvény",
+      "a nürnbergi",
+      "müncheni egyezmény",
+      "wilhelmi dekrétum"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mi az SA?",
+    "options": [
+      "rohamosztag",
+      "szakszervezet",
+      "munkásőrség",
+      "titkosszolgálat"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Ki volt a nemzetiszocializmus vezetője?",
+    "options": [
+      "Joseph Goebbels",
+      "Hermann Göring",
+      "Adolf Hitler",
+      "Heinrich Himmler"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Ki vezette a küldöttséget Franciaországba?",
+    "options": [
+      "Károlyi Mihály",
+      "Apponyi Albert",
+      "Horthy Miklós",
+      "Teleki Pál"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mikor írta alá a magyar küldöttség a békeszerződést?",
+    "options": [
+      "1919. június 4.",
+      "1921. november 16.",
+      "1918. október 31.",
+      "1920. június 4."
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Mekkora területet vesztett el Magyarország?",
+    "options": [
+      "53,2%",
+      "67,8%",
+      "45,1%",
+      "71,4%"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Mit szabályoztak Magyarországon belül?",
+    "options": [
+      "Népességelosztást",
+      "Mezőgazdasági exportot",
+      "Hadviselés",
+      "Oktatási törvényeket"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Magyarország népességének hány százalékát veszítette el?",
+    "options": [
+      "63,5%",
+      "49,7%",
+      "38,2%",
+      "70,3%"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Mire kötelezték Magyarországot?",
+    "options": [
+      "Újjáépítési támogatásra",
+      "Jóvátétel fizetésére",
+      "Oktatási reformokra",
+      "Nemzetiségi önrendelkezésre"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mi lett Magyarország nyersanyagbázisának jelentős részével?",
+    "options": [
+      "Államosították és fejlesztették",
+      "Idegen fennhatóság alá került",
+      "Teljesen függetlenné vált",
+      "Nemzeti kézbe került"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Hány ember menekült át Magyarországra 1920 után?",
+    "options": [
+      "2500",
+      "10000",
+      "több mint 4000",
+      "kb. 1500"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mikor jött létre a kisantant?",
+    "options": [
+      "1919-ben",
+      "1920 és 1921 között",
+      "1925-ben",
+      "1928-ban"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kik voltak a kisantant tagjai?",
+    "options": [
+      "Románia, Magyarország, Csehszlovákia",
+      "Románia, Jugoszlávia, Magyarország",
+      "Románia, Csehszlovákia, Szerb-Horvát-Szlovén Királyság",
+      "Lengyelország, Románia, Magyarország"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mikor jött létre a Szovjetunió?",
+    "options": [
+      "1919",
+      "1922",
+      "1925",
+      "1930"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Honnan irányították a Szovjetuniót?",
+    "options": [
+      "Szentpétervárról",
+      "Moszkvából",
+      "Kijevből",
+      "Leningrádból"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kiknél volt a Szovjetunióban a hatalom?",
+    "options": [
+      "Monarchistáknál",
+      "Bolsevikoknál",
+      "Szocialistáknál",
+      "Forradalmároknál"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mi volt a Komintern célja?",
+    "options": [
+      "A béke megőrzése",
+      "Világforradalom",
+      "Nemzetközi kereskedelem fejlesztése",
+      "Közös hadsereg létrehozása"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Milyen rendszert hozott létre Lenin?",
+    "options": [
+      "Többpárti demokrácia",
+      "Egypárti diktatúra",
+      "Szövetségi államot",
+      "Alkatrészes monarchiát"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mikor alakult meg a titkosrendőrség?",
+    "options": [
+      "1920",
+      "1918",
+      "1917",
+      "1919"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mikor halt meg Lenin?",
+    "options": [
+      "1920",
+      "1930",
+      "1924",
+      "1927"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Hogyan viszonyultak az egyházhoz ebben a korban?",
+    "options": [
+      "Támogatták anyagilag",
+      "Erőszakosan",
+      "Semlegesen",
+      "Együttműködtek a pápával"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mivé alakul át Szentpétervár neve?",
+    "options": [
+      "Moszkva",
+      "Leningrád",
+      "Petrograd",
+      "Stalingrád"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mi a gulág?",
+    "options": [
+      "Fegyvergyár",
+      "koncentrációs munkatábor",
+      "Vasúti hálózat",
+      "Politikai párt"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Kik voltak Lenin lehetséges utódai?",
+    "options": [
+      "Trockij és Lenin",
+      "Sztálin és Trockij",
+      "Trockij és Bukharin",
+      "Lenin és Sztálin"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mit biztosított Wilson elnök kisebbségvédelmi javaslata?",
+    "options": [
+      "Hadköteleseket biztosított",
+      "Anyanyelvhasználatot és vallásszabadságot",
+      "Államközi kereskedelmet",
+      "Új nemzetközi szervezetet"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Melyik ország akadályozta meg Magyarország felvételét a Népszövetségbe?",
+    "options": [
+      "Románia",
+      "Magyarország maga",
+      "Csehszlovákia",
+      "Jugoszlávia"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Mi volt a kisantant célja?",
+    "options": [
+      "Magyar külpolitikai törekvések blokkolása",
+      "Területi terjeszkedés",
+      "Magyarország gazdasági támogatása",
+      "Közös hadsereg létrehozása"
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Melyik ország akadályozta meg Magyarország felvételét a Népszövetségbe?",
+    "options": [
+      "Románia",
+      "Magyarország maga",
+      "Csehszlovákia",
+      "Jugoszlávia"
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Hány német élt Csehszlovákia peremterületein?",
+    "options": [
+      "1 millió",
+      "3 millió",
+      "500 ezer",
+      "2 millió"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Melyik országban vezettek be diktatúrát 1929-től?",
+    "options": [
+      "Románia",
+      "Magyarország",
+      "Csehszlovákia",
+      "Jugoszlávia"
+    ],
+    "correct": 3
+  },
+  {
+    "question": "Melyik ország volt Jugoszlávia hivatalos neve 1929-től?",
+    "options": [
+      "Magyar Királyság",
+      "Szerb-Horvát-Szlovén Királyság",
+      "Jugoszláv Szövetségi Állam",
+      "Népköztársaság"
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Mikor lett Lengyelország független?",
+    "options": [
+      "1925",
+      "1918",
+      "1920",
+      "1930"
+    ],
     "correct": 2
   }
 ]
