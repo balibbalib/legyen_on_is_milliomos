@@ -25,9 +25,9 @@
       font-size: 1.5em;
       margin-bottom: 1em;
     }
-    .timer {
+    .timer, .score, .prize {
       font-size: 1.2em;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
       color: #ffd700;
       transition: color 0.3s, background 0.3s;
     }
@@ -76,23 +76,35 @@
   <div class="game-box">
     <h1>Legyen Ön is Milliomos!</h1>
     <div class="timer" id="timer">Idő: 30 mp</div>
+    <div class="score" id="score">Pont: 0</div>
+    <div class="prize" id="prize">Nyeremény: 0 Ft</div>
     <div class="question" id="question">Betöltés...</div>
     <div class="answers" id="answers"></div>
     <div id="result" class="hidden"></div>
     <button id="restart" class="hidden" onclick="restartGame()">Újra</button>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
   <script>
     let questions = [];
     let current = 0;
     let timer;
     let timeLeft = 30;
+    let score = 0;
+    let prizeLevels = [
+      0, 5000, 10000, 25000, 50000,
+      100000, 200000, 400000, 800000, 1500000,
+      3000000, 5000000, 10000000, 20000000, 40000000
+    ];
 
     const questionEl = document.getElementById("question");
     const answersEl = document.getElementById("answers");
     const resultEl = document.getElementById("result");
     const timerEl = document.getElementById("timer");
     const restartBtn = document.getElementById("restart");
+    const scoreEl = document.getElementById("score");
+    const prizeEl = document.getElementById("prize");
 
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -135,36 +147,67 @@
       startTimer();
     }
 
-    function checkAnswer(index) {
-      clearInterval(timer);
-      if (index === questions[current].correct) {
-        current++;
-        if (current < questions.length) {
-          showQuestion();
-        } else {
-          endGame("Gratulálunk! Ön nyert!");
-        }
-      } else {
-        endGame("Sajnos ez hibás válasz volt. A játék véget ért.");
-      }
+    function updateScore() {
+      score++;
+      scoreEl.textContent = `Pont: ${score}`;
+      prizeEl.textContent = `Nyeremény: ${prizeLevels[score] || prizeLevels[prizeLevels.length - 1]} Ft`;
     }
+
+    function checkAnswer(index) {
+  clearInterval(timer);
+  if (index === questions[current].correct) {
+    updateScore();
+    current++;
+
+    if (score >= prizeLevels.length - 1 || current >= questions.length) {
+      setTimeout(() => {
+        endGame("Gratulálunk! Ön nyert!");
+      }, 100); 
+    } else {
+      showQuestion();
+    }
+  } else {
+    endGame("Sajnos ez hibás válasz volt. A játék véget ért.");
+  }
+}
 
     function endGame(message) {
       questionEl.classList.add("hidden");
       answersEl.classList.add("hidden");
       timerEl.classList.add("hidden");
-      resultEl.textContent = message;
+      resultEl.textContent = `${message}\nElért pont: ${score}\n`;
       resultEl.classList.remove("hidden");
       restartBtn.classList.remove("hidden");
+
+      if (message.includes("Gratulálunk")) {
+        const duration = 3 * 1000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+        const interval = setInterval(function () {
+          const timeLeft = animationEnd - Date.now();
+          if (timeLeft <= 0) {
+            return clearInterval(interval);
+          }
+
+          confetti(Object.assign({}, defaults, {
+            particleCount: 50,
+            origin: { x: Math.random(), y: Math.random() - 0.2 }
+          }));
+        }, 250);
+      }
     }
 
     function restartGame() {
       current = 0;
+      score = 0;
       resultEl.classList.add("hidden");
       restartBtn.classList.add("hidden");
       questionEl.classList.remove("hidden");
       answersEl.classList.remove("hidden");
       timerEl.classList.remove("hidden");
+      scoreEl.textContent = "Pont: 0";
+      prizeEl.textContent = "Nyeremény: 0 Ft";
       questions = shuffle(questions);
       showQuestion();
     }
